@@ -1,4 +1,4 @@
-from Npp import *
+from Npp import * # type: ignore
 
 INDENT_TRADER = ""
 INDENT_CATEGORY = " " * 4
@@ -11,10 +11,8 @@ def format_category_items(items):
     if not items:
         return []
 
-    # Sort alphabetically by item name
     items.sort(key=lambda x: x['name'].lower())
 
-    # Find longest item name in this category
     max_len = max(len(item['name']) for item in items)
 
     formatted = []
@@ -36,7 +34,7 @@ def format_category_items(items):
 
 
 def pretty_print_trader():
-    lines = editor.getText().splitlines()
+    lines = editor.getText().splitlines() # type: ignore
     output = []
 
     current_items = []
@@ -111,13 +109,13 @@ def pretty_print_trader():
     if current_items:
         output.extend(format_category_items(current_items))
 
-    editor.beginUndoAction()
-    editor.setText("\n".join(output))
-    editor.endUndoAction()
+    editor.beginUndoAction() # type: ignore
+    editor.setText("\n".join(output)) # type: ignore
+    editor.endUndoAction() # type: ignore
 
-    console.show()
-    console.clear()
-    console.write("Pretty print completed (Python 2 compatible).\n")
+    console.show() # type: ignore
+    console.clear() # type: ignore
+    console.write("Pretty print completed (Python 2 compatible).\n") # type: ignore
 
 
 pretty_print_trader()
