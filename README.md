@@ -6,7 +6,7 @@ It can be installed in notepad++ by going to "Plugins -> Plugins Admin" and sear
 
 Then go to "Plugins -> Python Script -> New Script" and select ValidateTrader.py.<br>
 
-To add a button to the Toolbar or Menu go to "Plugins -> Python Script -> Configuration".
+To add it to the Toolbar or Menu go to "Plugins -> Python Script -> Configuration".
 Select the script and click "Add" then "OK" and restart Notepad++
 
 
